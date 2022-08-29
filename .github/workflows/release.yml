@@ -12,7 +12,7 @@ jobs:
           - label
         steps:
           - name: checkout
-            run: git checkout HEAD^
+            run: git checkout feature/release
           - name: install modeules
             run: npm ci  
           - name: creating changelog
