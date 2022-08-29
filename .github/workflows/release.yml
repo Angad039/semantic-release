@@ -13,10 +13,6 @@ jobs:
         steps:
           - name: checkout
             run: git checkout HEAD^
-            with:
-              repository: Angad039/semantic-release
-              token: ${{ secrets.PAT }}
-              ref: main
           - name: install modeules
             run: npm ci  
           - name: creating changelog
