@@ -1,0 +1,22 @@
+name: build
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - feature/release
+jobs:
+  versioning:
+        name: versioning
+        runs-on: 
+          - self-hosted
+          - label-1 
+        steps:
+          - name: checkout
+            uses: action/checkout@v2
+          - name: install modeules
+            run: npm ci  
+          - name: creating changelog
+            run: npx semantic-release
+            env:
+              GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              NODE_TLS_REJECT_UNAUTHORIZED: 0
