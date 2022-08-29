@@ -12,7 +12,7 @@ jobs:
           - label
         steps:
           - name: checkout
-            uses: action/checkout@v3
+            run: git checkout HEAD^
             with:
               repository: Angad039/semantic-release
               token: ${{ secrets.PAT }}
