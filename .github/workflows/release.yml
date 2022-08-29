@@ -15,7 +15,7 @@ jobs:
             uses: action/checkout@v2
             with:
               repository: Angad039/semantic-release
-              token: ${{ secrets.GH_TOKEN }}
+              token: ${{ secrets.PAT }}
           - name: install modeules
             run: npm ci  
           - name: creating changelog
