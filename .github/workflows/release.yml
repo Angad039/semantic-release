@@ -11,6 +11,8 @@ jobs:
           - self-hosted
           - label
         steps:
+          - name: checkout
+            uses: action/checkout@latest
           - name: install modeules
             run: npm ci  
           - name: creating changelog
