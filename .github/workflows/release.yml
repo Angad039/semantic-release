@@ -9,7 +9,7 @@ jobs:
         name: versioning
         runs-on: 
           - self-hosted
-          - label-1 label-2
+          - label-1label-2
         steps:
           - name: checkout
             uses: action/checkout@v2
