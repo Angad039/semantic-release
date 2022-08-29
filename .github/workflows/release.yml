@@ -16,6 +16,7 @@ jobs:
             with:
               repository: Angad039/semantic-release
               token: ${{ secrets.PAT }}
+              ref: maain
           - name: install modeules
             run: npm ci  
           - name: creating changelog
