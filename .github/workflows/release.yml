@@ -12,7 +12,7 @@ jobs:
           - label
         steps:
           - name: checkout
-            uses: action/checkout@latest
+            uses: action/checkout
           - name: install modeules
             run: npm ci  
           - name: creating changelog
