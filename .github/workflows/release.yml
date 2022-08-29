@@ -12,11 +12,11 @@ jobs:
           - label
         steps:
           - name: checkout
-            uses: action/checkout@v2
+            uses: action/checkout@v3
             with:
               repository: Angad039/semantic-release
               token: ${{ secrets.PAT }}
-              ref: maain
+              ref: main
           - name: install modeules
             run: npm ci  
           - name: creating changelog
