@@ -13,10 +13,13 @@ jobs:
         steps:
           - name: checkout
             uses: action/checkout
+            with:
+              repository: Angad039/semantic-release
+              token: ${{ secrets.GH_TOKEN }}
           - name: install modeules
             run: npm ci  
           - name: creating changelog
             run: npx semantic-release
             env:
-              GH_TOKEN: ${{ secrets.GHTOKEN }}
+              GH_TOKEN: ${{ secrets.GH_TOKEN }}
               NODE_TLS_REJECT_UNAUTHORIZED: 0
